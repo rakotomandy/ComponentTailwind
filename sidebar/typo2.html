@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Responsive Sidebar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-JPNM7rZ7pPZ+L+rA6blx4TcL2hU8S4MZjGx0ODiXy8BODwkpM6juHgr2giN4v3yF6g6k0X1NEnX+LkqKxHmYVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="flex h-screen bg-gray-100">
+
+  <!-- Sidebar -->
+  <aside class="bg-gradient-to-b from-purple-600 via-indigo-600 to-pink-600 w-64 md:flex flex-col hidden text-white shadow-lg">
+    <!-- Logo -->
+    <div class="flex items-center gap-3 px-6 py-5">
+      <i class="fa-solid fa-gem text-yellow-400 text-2xl"></i>
+      <span class="text-2xl font-bold">Brand</span>
+    </div>
+
+    <!-- Menu -->
+    <nav class="flex-1 px-2 py-4 space-y-2">
+      <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg transition hover:bg-white/20 hover:translate-x-2 duration-200">
+        <i class="fa-solid fa-house w-5"></i>
+        <span class="font-medium">Dashboard</span>
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg transition hover:bg-white/20 hover:translate-x-2 duration-200">
+        <i class="fa-solid fa-user w-5"></i>
+        <span class="font-medium">Profile</span>
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg transition hover:bg-white/20 hover:translate-x-2 duration-200">
+        <i class="fa-solid fa-cog w-5"></i>
+        <span class="font-medium">Settings</span>
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg transition hover:bg-white/20 hover:translate-x-2 duration-200">
+        <i class="fa-solid fa-right-from-bracket w-5"></i>
+        <span class="font-medium">Logout</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Mobile Topbar -->
+  <div class="md:hidden w-full">
+    <div class="flex items-center justify-between bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 px-4 py-3 text-white shadow-lg">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-gem text-yellow-400 text-2xl"></i>
+        <span class="text-xl font-bold">Brand</span>
+      </div>
+      <button id="mobile-menu-button" class="focus:outline-none">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden bg-gradient-to-b from-purple-600 via-indigo-600 to-pink-600 text-white">
+      <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-white/20 transition">
+        <i class="fa-solid fa-house w-5"></i>
+        <span class="font-medium">Dashboard</span>
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-white/20 transition">
+        <i class="fa-solid fa-user w-5"></i>
+        <span class="font-medium">Profile</span>
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-white/20 transition">
+        <i class="fa-solid fa-cog w-5"></i>
+        <span class="font-medium">Settings</span>
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-white/20 transition">
+        <i class="fa-solid fa-right-from-bracket w-5"></i>
+        <span class="font-medium">Logout</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6">
+    <h1 class="text-3xl font-bold text-gray-800">Welcome!</h1>
+    <p class="mt-4 text-gray-600">This sidebar has a gradient background, hover animation, and fully responsive design.</p>
+  </main>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
