@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Logo Navbar Tailwind v4</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../FontAwesome/all.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+
+        <!-- Mobile menu button (left) -->
+        <div class="flex items-center md:hidden">
+          <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </button>
+        </div>
+
+        <!-- Logo (center) -->
+        <div class="flex-shrink-0 flex items-center justify-center">
+          <a href="#" class="text-2xl font-bold text-blue-600 flex items-center space-x-2">
+            <i class="fa-solid fa-dragon"></i>
+            <span>Brand</span>
+          </a>
+        </div>
+
+        <!-- Desktop Menu (right) -->
+        <div class="hidden md:flex md:items-center md:space-x-6">
+          <a href="#" class="text-gray-700 hover:text-blue-600 transition flex items-center space-x-1">
+            <i class="fa-solid fa-house"></i><span>Home</span>
+          </a>
+          <a href="#" class="text-gray-700 hover:text-blue-600 transition flex items-center space-x-1">
+            <i class="fa-solid fa-info-circle"></i><span>About</span>
+          </a>
+          <a href="#" class="text-gray-700 hover:text-blue-600 transition flex items-center space-x-1">
+            <i class="fa-solid fa-briefcase"></i><span>Services</span>
+          </a>
+          <a href="#" class="text-gray-700 hover:text-blue-600 transition flex items-center space-x-1">
+            <i class="fa-solid fa-envelope"></i><span>Contact</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile sliding menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+      <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 transition flex items-center space-x-2">
+        <i class="fa-solid fa-house"></i><span>Home</span>
+      </a>
+      <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 transition flex items-center space-x-2">
+        <i class="fa-solid fa-info-circle"></i><span>About</span>
+      </a>
+      <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 transition flex items-center space-x-2">
+        <i class="fa-solid fa-briefcase"></i><span>Services</span>
+      </a>
+      <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 transition flex items-center space-x-2">
+        <i class="fa-solid fa-envelope"></i><span>Contact</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="pt-20 max-w-7xl mx-auto px-4">
+    <h1 class="text-4xl font-bold mb-6">Centered Logo Navbar</h1>
+    <p class="text-gray-600 mb-4">This navbar has a centered logo and right-aligned desktop menu.</p>
+    <p class="text-gray-600">Resize your browser to see the mobile menu toggle from the left.</p>
+  </div>
+
+  <!-- Toggle Script -->
+   <script src="../FontAwesome/all.js"></script>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar with Search Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../FontAwesome/all.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-bold text-blue-600 flex items-center space-x-2">
+          <i class="fa-solid fa-rocket"></i>
+          <span>MyBrand</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex md:items-center md:space-x-6">
+          <a href="#" class="text-gray-700 hover:text-blue-600 transition flex items-center space-x-1">
+            <i class="fa-solid fa-house"></i><span>Home</span>
+          </a>
+          <a href="#" class="text-gray-700 hover:text-blue-600 transition flex items-center space-x-1">
+            <i class="fa-solid fa-info-circle"></i><span>About</span>
+          </a>
+          <a href="#" class="text-gray-700 hover:text-blue-600 transition flex items-center space-x-1">
+            <i class="fa-solid fa-briefcase"></i><span>Services</span>
+          </a>
+          <a href="#" class="text-gray-700 hover:text-blue-600 transition flex items-center space-x-1">
+            <i class="fa-solid fa-envelope"></i><span>Contact</span>
+          </a>
+
+          <!-- Search form -->
+          <form class="flex items-center ml-4">
+            <input type="text" placeholder="Search..." class="px-3 py-1 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600">
+            <button type="submit" class="bg-blue-600 text-white px-3 py-1 rounded-r-lg hover:bg-blue-700 transition">Search</button>
+          </form>
+
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner">
+      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 transition flex items-center space-x-2">
+        <i class="fa-solid fa-house"></i><span>Home</span>
+      </a>
+      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 transition flex items-center space-x-2">
+        <i class="fa-solid fa-info-circle"></i><span>About</span>
+      </a>
+      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 transition flex items-center space-x-2">
+        <i class="fa-solid fa-briefcase"></i><span>Services</span>
+      </a>
+      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 transition flex items-center space-x-2">
+        <i class="fa-solid fa-envelope"></i><span>Contact</span>
+      </a>
+      <!-- Mobile search form -->
+      <form class="flex items-center px-4 py-2 space-x-2">
+        <input type="text" placeholder="Search..." class="flex-1 px-3 py-1 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600">
+        <button type="submit" class="bg-blue-600 text-white px-3 py-1 rounded-r-lg hover:bg-blue-700 transition">Search</button>
+      </form>
+    </div>
+
+  </nav>
+
+  <!-- Page Content -->
+  <div class="pt-24 max-w-7xl mx-auto px-4">
+    <h1 class="text-4xl font-bold mb-6">Navbar with Search Form</h1>
+    <p class="text-gray-600 mb-4">Responsive navbar with search input and button, fully functional on mobile and desktop.</p>
+  </div>
+   <script src="../FontAwesome/all.js"></script>
+
+  <!-- Toggle Script -->
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

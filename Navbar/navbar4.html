@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar with Dropdowns</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../FontAwesome/all.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-bold text-blue-600 flex items-center space-x-2">
+          <i class="fa-solid fa-rocket"></i>
+          <span>Brand</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex md:items-center md:space-x-6">
+
+          <!-- Home Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all">
+              <a href="#" class="block px-4 py-2 hover:bg-blue-50">Subhome 1</a>
+              <a href="#" class="block px-4 py-2 hover:bg-blue-50">Subhome 2</a>
+            </div>
+          </div>
+
+          <!-- About Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition">
+              <span>About</span>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all">
+              <a href="#" class="block px-4 py-2 hover:bg-blue-50">Team</a>
+              <a href="#" class="block px-4 py-2 hover:bg-blue-50">Company</a>
+            </div>
+          </div>
+
+          <!-- Services Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition">
+              <span>Services</span>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all">
+              <a href="#" class="block px-4 py-2 hover:bg-blue-50">Web Design</a>
+              <a href="#" class="block px-4 py-2 hover:bg-blue-50">Marketing</a>
+            </div>
+          </div>
+
+          <!-- Contact Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition">
+              <span>Contact</span>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all">
+              <a href="#" class="block px-4 py-2 hover:bg-blue-50">Email</a>
+              <a href="#" class="block px-4 py-2 hover:bg-blue-50">Support</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner">
+      <!-- Home -->
+      <details class="group border-b border-gray-200">
+        <summary class="px-4 py-2 cursor-pointer flex justify-between items-center hover:bg-blue-50">
+          Home <i class="fa-solid fa-chevron-down text-xs"></i>
+        </summary>
+        <div class="px-4 py-2 space-y-1">
+          <a href="#" class="block py-1 hover:bg-blue-50">Subhome 1</a>
+          <a href="#" class="block py-1 hover:bg-blue-50">Subhome 2</a>
+        </div>
+      </details>
+
+      <!-- About -->
+      <details class="group border-b border-gray-200">
+        <summary class="px-4 py-2 cursor-pointer flex justify-between items-center hover:bg-blue-50">
+          About <i class="fa-solid fa-chevron-down text-xs"></i>
+        </summary>
+        <div class="px-4 py-2 space-y-1">
+          <a href="#" class="block py-1 hover:bg-blue-50">Team</a>
+          <a href="#" class="block py-1 hover:bg-blue-50">Company</a>
+        </div>
+      </details>
+
+      <!-- Services -->
+      <details class="group border-b border-gray-200">
+        <summary class="px-4 py-2 cursor-pointer flex justify-between items-center hover:bg-blue-50">
+          Services <i class="fa-solid fa-chevron-down text-xs"></i>
+        </summary>
+        <div class="px-4 py-2 space-y-1">
+          <a href="#" class="block py-1 hover:bg-blue-50">Web Design</a>
+          <a href="#" class="block py-1 hover:bg-blue-50">Marketing</a>
+        </div>
+      </details>
+
+      <!-- Contact -->
+      <details class="group border-b border-gray-200">
+        <summary class="px-4 py-2 cursor-pointer flex justify-between items-center hover:bg-blue-50">
+          Contact <i class="fa-solid fa-chevron-down text-xs"></i>
+        </summary>
+        <div class="px-4 py-2 space-y-1">
+          <a href="#" class="block py-1 hover:bg-blue-50">Email</a>
+          <a href="#" class="block py-1 hover:bg-blue-50">Support</a>
+        </div>
+      </details>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="pt-24 max-w-7xl mx-auto px-4">
+    <h1 class="text-4xl font-bold mb-6">Dropdown Navbar Example</h1>
+    <p class="text-gray-600 mb-4">Hover over each link on desktop to see the dropdown. On mobile, tap to expand submenus.</p>
+  </div>
+   <script src="../FontAwesome/all.js"></script>
+
+  <!-- Mobile toggle script -->
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+
+</body>
+</html>
